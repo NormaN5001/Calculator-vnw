@@ -40,7 +40,7 @@ export class App extends Component {
   }
   clear = () =>{
     let{n1, n2} = this.state
-    if (n1 && n2 !== ""){
+    if (n1 && n2 !== null){
       this.setState({
         n1: 0,
         n2: 0,
@@ -63,8 +63,8 @@ export class App extends Component {
     return (
       <div>
         <h1>Calc App</h1>
-        <input onChange={this.handleChange1} value={this.n1} />
-        <input onChange={this.handleChange2} value={this.n2}/>
+        <input onChange={this.handleChange1}/>
+        <input onChange={this.handleChange2}/>
         <button onClick={this.divide}>/</button>
         <button onClick={this.multiplic}>*</button>
         <button onClick={this.subtraction}>-</button>
